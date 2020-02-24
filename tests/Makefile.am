@@ -150,6 +150,7 @@ dist_braille_specs_TESTS =				  \
 	braille-specs/lt-6dot_harness.yaml		  \
 	braille-specs/lv_harness.yaml			  \
 	braille-specs/mn-MN_harness.yaml		  \
+	braille-specs/ms-my-g2.yaml			  \
 	braille-specs/nl-comp8_harness.yaml		  \
 	braille-specs/nl-NL-g0_harness.yaml		  \
 	braille-specs/nl-g0_harness.yaml		  \

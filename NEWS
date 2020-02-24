@@ -43,6 +43,8 @@ issues]].
   - Fixed the back translation conflict between the UEB circle shape
     indicator and words containing $= being the contraction for
     "alge".
+- New table for grade 2 Malay braille (Malaysia) thanks to Herbert
+  Koh.
 
 ** Other changes
 ** Deprecation notice
