@@ -295,30 +295,40 @@ tests:
         italic: '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
   # drukwijzigingsteken komt na het leesteken
   - - "'cursief'"
-    - ⠄⠸⠉⠥⠗⠎⠊⠑⠋⠄
+    - ⠄⠸⠉⠥⠗⠎⠊⠑⠋⠄ # FIXME: by default the begemphword indicator should come before the first '
+                     # and this should be overrideable with a "noemphchars" rule
     - typeform:
         italic: '+++++++++'
   - - "'cursief'"
-    - ⠄⠸⠉⠥⠗⠎⠊⠑⠋⠄
+    - ⠄⠸⠉⠥⠗⠎⠊⠑⠋⠄ # FIXME: by default there should be an endemphword indicator before the final '
+                     # and this should be overrideable with a "noemphchars" rule
     - typeform:
         italic: ' +++++++ '
   - - (cursief)
-    - ⠦⠸⠉⠥⠗⠎⠊⠑⠋⠴
+    - ⠦⠸⠉⠥⠗⠎⠊⠑⠋⠴ # FIXME: by default the begemphword indicator should come before the (
+                     # and this should be overrideable with a "noemphchars" rule
+                     # also because ) is not in emphmodechars there should be an emphletter before the )
     - typeform:
         italic: '+++++++++'
   - - (cursief)
-    - ⠦⠸⠉⠥⠗⠎⠊⠑⠋⠴
+    - ⠦⠸⠉⠥⠗⠎⠊⠑⠋⠴ # FIXME: by default there should be an endemphword indicator before the )
+                     # and this should be overrideable with a "noemphchars" rule
+                     # also if ) would be in emphmodechars (which is the default) there would have to
+                     # be an endemphword before the )
     - typeform:
         italic: ' +++++++ '
-  - # indien het eerste woord met een leesteken begint het permanent drukwijzigingsteken toch bij het
-    # eerste woord, na het leesteken en wordt pas bij het laatste woord opgeheven
+  - # indien het eerste woord met een leesteken begint, begint het permanent drukwijzigingsteken toch
+    # bij het eerste woord, na het leesteken en wordt het pas bij het laatste woord opgeheven
     - "'meer dan drie woorden in cursief'"
-    - ⠄⠸⠸⠍⠑⠑⠗ ⠙⠁⠝ ⠙⠗⠊⠑ ⠺⠕⠕⠗⠙⠑⠝ ⠊⠝ ⠸⠉⠥⠗⠎⠊⠑⠋⠄
+    - ⠄⠸⠸⠍⠑⠑⠗ ⠙⠁⠝ ⠙⠗⠊⠑ ⠺⠕⠕⠗⠙⠑⠝ ⠊⠝ ⠸⠉⠥⠗⠎⠊⠑⠋⠄ # FIXME: by default the begemphword indicator
+                                                          # should come before the first '
     - typeform:
         italic: '++++++++++++++++++++++++++++++++++'
   - # ... ook indien de leestekens niet cursief zijn
     - "'meer dan drie woorden in cursief'"
-    - ⠄⠸⠸⠍⠑⠑⠗ ⠙⠁⠝ ⠙⠗⠊⠑ ⠺⠕⠕⠗⠙⠑⠝ ⠊⠝ ⠸⠉⠥⠗⠎⠊⠑⠋⠄
+    - ⠄⠸⠸⠍⠑⠑⠗ ⠙⠁⠝ ⠙⠗⠊⠑ ⠺⠕⠕⠗⠙⠑⠝ ⠊⠝ ⠸⠉⠥⠗⠎⠊⠑⠋⠄ # FIXME: by default there should be an begemphword
+                                                          # indicator before the last word and a endemphword
+                                                          # before the final '
     - typeform:
         italic: ' ++++++++++++++++++++++++++++++++ '
       xfail: true
